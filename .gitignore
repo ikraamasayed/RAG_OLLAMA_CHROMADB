@@ -1,0 +1,11 @@
+venv/
+.env
+__pycache__/
+.vscode/
+
+# ignore db file
+db/chroma_db/
+
+# ignore documents
+docs/
+
