@@ -4,10 +4,12 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_chroma import Chroma
 from langchain_ollama import OllamaEmbeddings
 from tqdm import tqdm
+from config import DOCS_PATH, DB_PATH
 
 # Paths
-DOCS_PATH = "docs"
-DB_PATH = r"db\chroma_db"  
+
+# Ensure directory exists
+DB_PATH.mkdir(parents=True, exist_ok=True)
 
 def load_documents():
     loaders = [
